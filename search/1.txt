@@ -1,0 +1,45 @@
+Q)https://www.hackerrank.com/challenges/icecream-parlor/problem
+
+
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+int main()
+{
+   int t,n,m,i,j,k;
+   scanf("%d",&t);
+   while(t--)
+   {
+       scanf("%d\n%d",&m,&n);
+       int cost[n];
+       for(k=0;k<n;k++)
+       scanf("%d ",&cost[k]);
+   
+   for(i=0;i<n;i++)
+   {
+     for(j=i+1;j<n;j++)
+       {
+           if(cost[i]+cost[j]==m)
+           {
+              printf("%d %d\n",i+1,j+1);
+              i=n;
+              j=n;
+           }
+       }
+   }
+   
+   }
+    return 0;
+}
+
+

@@ -1,0 +1,23 @@
+Q)https://www.hackerrank.com/challenges/sherlock-and-array/problem
+
+
+
+char* balancedSums(int arr_count, int* arr) {
+    int lb=0,ub=arr_count-1,s1=arr[lb],s2=arr[ub];
+    while(lb!=ub)
+    {
+       if(s1<s2)
+        {  lb++;
+            s1+=arr[lb];
+        }
+        else {
+            ub--;
+            s2+=arr[ub];
+            }
+    }
+    if(s1==s2)
+        return "YES";
+    else 
+            return "NO";
+
+}

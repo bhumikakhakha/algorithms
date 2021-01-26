@@ -1,0 +1,24 @@
+Q)https://www.hackerrank.com/challenges/grading/problem
+
+
+
+
+int* gradingStudents(int grades_count, int* grades, int* result_count) {
+    int i,g=0;
+      int *r=malloc(grades_count*sizeof(int));
+        *result_count=grades_count;
+        for(i=0;i<grades_count;i++)
+          {
+              g=((grades[i]/5)+1)*5;
+        if(grades[i]>=38 && g-grades[i]<3)     
+               r[i]=g;    
+          else
+                r[i]=grades[i];
+         }
+         return r;
+}
+
+
+
+
+

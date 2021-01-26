@@ -1,0 +1,18 @@
+Q)https://www.hackerrank.com/challenges/a-very-big-sum/problem
+
+
+
+
+
+long aVeryBigSum(int ar_count, long* ar) {
+    
+    long int sum=0;
+
+for(int i=0;i<ar_count;i++)
+{
+  scanf("%ld",&ar[i]);
+   sum+=ar[i];
+}
+   return sum;
+}
+

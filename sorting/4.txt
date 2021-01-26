@@ -1,0 +1,36 @@
+Q)https://www.hackerrank.com/challenges/runningtime/problem
+
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int n,i,j,count=0,key;
+    scanf("%d",&n);
+    int arr[n];
+    for(int k=0;k<n;k++)
+    scanf("%d",&arr[k]);
+    for(i=1;i<n;i++)
+    {
+        key=arr[i];
+        j=i-1;
+        while(j>=0 && key<arr[j])
+        {
+            arr[j+1]=arr[j];
+            j--;
+              count++;
+        }
+        arr[j+1]=key;
+        
+    }
+    printf("%d",count);
+
+}
